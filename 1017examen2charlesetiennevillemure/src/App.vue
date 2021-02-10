@@ -10,9 +10,8 @@
 <script>
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Accueil from './views/Accueil'
-import Profile from './views/Profile'
-
+import Accueil from './views/Accueil';
+import Profile from './views/Profile';
 export default {
   name: 'App',
   data: function(){
@@ -24,7 +23,7 @@ export default {
     Footer,
     Header,
     Accueil,
-    Profile
+    Profile,
   },
   computed: {
     valeurLogin(){
