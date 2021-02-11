@@ -3,6 +3,7 @@
     <Header></Header>
     <Accueil v-if="logged===false"></Accueil>
     <Profile v-if="logged===true"></Profile>
+    <router-view/>
     <Footer></Footer>
   </div>
 </template>
@@ -28,17 +29,21 @@ export default {
   computed: {
     valeurLogin(){
       return this.logged
-    }
+    },
   },
   created(){
-    this.logged = false;
-  }
+    this.logged = true;
+  },
+  mounted() {
+  console.info('App currentRoute:', this.$router.currentRoute)
+}
+
 }
 
 </script>
 
 <style>
 #app {
-
+  height: 100vh;
 }
 </style>

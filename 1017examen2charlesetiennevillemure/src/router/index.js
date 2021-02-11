@@ -5,6 +5,21 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/',
+    name:'Accueil'
+  }
+  ,
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import("../views/Contact.vue")
+  },
+  {
+    path: '/projet',
+    name: 'Projet',
+    component: ()=> import("../views/Projet.vue")
+  }
 ]
 
 const router = new VueRouter({

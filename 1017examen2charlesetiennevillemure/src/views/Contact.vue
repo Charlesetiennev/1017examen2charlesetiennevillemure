@@ -9,7 +9,7 @@
         <label for="email">Email :<span class="rouge">* </span></label>
             <input id="email" type="email" required/><br>
         <select>
-            <option  v-for="sujet in sujets" :key = "sujet" v-bind:value="sujet.value">{{sujet.value}}</option>
+            <option  v-for="sujet in sujets" :key="sujet.id" v-bind:value="sujet.value">{{sujet.value}}</option>
         </select>        
     </form>
     </div>
@@ -26,8 +26,17 @@ export default {
             {id: 3, value: 'Tout autre questions'},
         ]
     }
-  }
+  },
+
 }
+// const TRANSLATIONS={
+//     en:{
+//         firstName:'Firstname'
+//     },
+//     fr:{
+//         firstName:'Prenom'
+//     }
+// }
 </script>
 <style>
     .rouge{

@@ -1,8 +1,32 @@
 <template>
-    <h1>Header de mon app</h1>
+<div>
+    <li v-for="route in routes" v-bind:key="route.id">
+        <router-link  :to="{path:route.router}">{{route.name}}</router-link>
+    </li>
+</div>
 </template>
 <script>
 export default {
-    name:'Header'
+    name:'Header',
+             data: function () {
+    return {
+        routes: [
+            {id: 1, name: 'Accueil', router:'/'},
+            {id: 2, name: 'Contact', router:'/contact'},
+            {id: 3, name: 'Projet', router:'/projet'},
+        ]
+    }
+  },
 }
 </script>
+<style scoped>
+    div{
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    li{
+        list-style: none;
+        font-size: 4vh;
+    }
+</style>
