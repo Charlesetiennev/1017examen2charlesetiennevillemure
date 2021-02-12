@@ -2,7 +2,7 @@
     <div>
     <h1>Contact</h1>
     <form>
-        <label for="nom">Nom :<span class="rouge">* </span> </label>
+        <label for="nom" v-text="fr.nom"> </label><span class="rouge">* </span>
             <input id="nom" type="text" required/><br>
         <label for="prenom">Prenom :<span class="rouge">* </span></label>
             <input id="prenom" type="text" required/><br>
@@ -12,31 +12,34 @@
             <option  v-for="sujet in sujets" :key="sujet.id" v-bind:value="sujet.value">{{sujet.value}}</option>
         </select>        
     </form>
+    <p>{{en.prenom}}</p>
     </div>
 </template>
 
 <script>
+import {TRANSLATIONS} from '../mixins/translateMixin';
+
 export default {
     name:'Contact',
-         data: function () {
-    return {
-        sujets: [
-            {id: 1, value: 'Probleme technique'},
-            {id: 2, value: 'Service Clientele'},
-            {id: 3, value: 'Tout autre questions'},
-        ]
-    }
-  },
-
+    mixins:[TRANSLATIONS],
+    data: function () {
+        return {
+            sujets: [
+                {id: 1, value: 'Probleme technique'},
+                {id: 2, value: 'Service Clientele'},
+                {id: 3, value: 'Tout autre questions'},
+            ]
+        }
+    },
+    filters:{
+        checkLanguage(){
+            var fr = this.fr
+            var result =Object.keys(fr)
+            .map(keys =>fr[keys])
+            console.log(result)
+        }
+    },
 }
-// const TRANSLATIONS={
-//     en:{
-//         firstName:'Firstname'
-//     },
-//     fr:{
-//         firstName:'Prenom'
-//     }
-// }
 </script>
 <style>
     .rouge{

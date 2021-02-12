@@ -32,7 +32,7 @@ export default {
     },
   },
   created(){
-    this.logged = true;
+    this.logged = false;
   },
   mounted() {
   console.info('App currentRoute:', this.$router.currentRoute)
