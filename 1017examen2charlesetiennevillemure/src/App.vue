@@ -52,5 +52,6 @@ body{
 }
 a{
   color: black;
+  text-align: center;
 }
 </style>
