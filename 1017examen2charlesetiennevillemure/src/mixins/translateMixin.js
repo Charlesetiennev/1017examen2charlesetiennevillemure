@@ -1,6 +1,7 @@
 export const TRANSLATIONS = {
     data() {
         return{
+            // Valeur Francais
             langue:'fr',
             nomForm:'',
             fr:{
@@ -8,6 +9,7 @@ export const TRANSLATIONS = {
                 prenom:'Prenom',
                 email:'Courriel'
             },
+            // Valeur Anglais
             en:{
                 nom:'Lastname',
                 prenom:'Firstname',

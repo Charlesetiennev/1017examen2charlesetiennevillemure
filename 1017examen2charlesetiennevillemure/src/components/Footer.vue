@@ -16,7 +16,7 @@ export default {
     footerContent:{
        bind: function(el){
          var dateDuJour = (new Date().toLocaleDateString())
-         el.innerHTML = 'Charles-Etienne Villemure &copy'+ dateDuJour
+         el.innerHTML = 'Charles-Etienne Villemure &copy '+ dateDuJour
        }
   }
     }
