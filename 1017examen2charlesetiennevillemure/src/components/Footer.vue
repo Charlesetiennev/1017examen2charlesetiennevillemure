@@ -16,7 +16,7 @@ export default {
     footerContent:{
        bind: function(el){
          var dateDuJour = (new Date().toLocaleDateString())
-         el.innerHTML = 'Charles-Etienne Villemure &copy '+ dateDuJour
+         el.innerHTML = 'Charles-Etienne Villemure &copy '+ dateDuJour + ' <a href="https://github.com/Charlesetiennev/1017examen2charlesetiennevillemure/blob/main/Licence" target="blank">Licence</a>'
        }
   }
     }
@@ -30,6 +30,9 @@ h1{
   left: 0;
   bottom: 0;
   width: 100%;
+  padding: 1.2vh;
+  margin: 0;
   text-align: center;
+  background: #1d7c21;
 }
 </style>

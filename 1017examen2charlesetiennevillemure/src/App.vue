@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header></Header>
+    <!-- Booleen pour afficher un composent dependament si un utilisateur est connecter -->
     <Accueil v-if="logged===false"></Accueil>
     <Profile v-if="logged===true"></Profile>
     <router-view/>
@@ -45,5 +46,11 @@ export default {
 <style>
 #app {
   height: 100vh;
+}
+body{
+  margin: 0;
+}
+a{
+  color: black;
 }
 </style>

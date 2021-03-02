@@ -24,6 +24,9 @@ export default {
         display: inline-flex;
         width: 100%;
         justify-content: space-around;
+        background: #1d7c21;
+        margin: 0;
+        padding: 1.2vh;
     }
     li{
         list-style: none;
