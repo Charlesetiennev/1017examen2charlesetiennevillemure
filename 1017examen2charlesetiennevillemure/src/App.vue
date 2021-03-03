@@ -2,24 +2,26 @@
   <div id="app">
     <Header></Header>
     <!-- Booleen pour afficher un composent dependament si un utilisateur est connecter -->
-    <Accueil v-if="logged===false"></Accueil>
-    <Profile v-if="logged===true"></Profile>
-    <router-view/>
+    <Accueil v-if="logged === false"></Accueil>
+    <Profile v-if="logged === true"></Profile>
+    <router-view />
     <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Accueil from './views/Accueil';
-import Profile from './views/Profile';
+// Importation Components/Views
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Accueil from "./views/Accueil";
+import Profile from "./views/Profile";
+// Script component
 export default {
-  name: 'App',
-  data: function(){
-    return{
-      logged : undefined
-    }
+  name: "App",
+  data: function () {
+    return {
+      logged: undefined,
+    };
   },
   components: {
     Footer,
@@ -28,29 +30,28 @@ export default {
     Profile,
   },
   computed: {
-    valeurLogin(){
-      return this.logged
+    valeurLogin() {
+      return this.logged;
     },
   },
-  created(){
+  // Declaration brut si un utilisateur est connecter ou non.
+  created() {
     this.logged = false;
   },
   mounted() {
-  console.info('App currentRoute:', this.$router.currentRoute)
-}
-
-}
-
+    console.info("App currentRoute:", this.$router.currentRoute);
+  },
+};
 </script>
 
 <style>
 #app {
   height: 100vh;
 }
-body{
+body {
   margin: 0;
 }
-a{
+a {
   color: black;
   text-align: center;
 }

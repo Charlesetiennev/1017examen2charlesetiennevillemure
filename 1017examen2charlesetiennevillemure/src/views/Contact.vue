@@ -28,8 +28,8 @@ export default {
         return {
             titreDePage : 'Contact',
             sujets: [
-                {id: 1, value: 'Probleme technique'},
-                {id: 2, value: 'Service Clientele'},
+                {id: 1, value: 'Problème technique'},
+                {id: 2, value: 'Service clientèle'},
                 {id: 3, value: 'Tout autre questions'},
             ]
         }

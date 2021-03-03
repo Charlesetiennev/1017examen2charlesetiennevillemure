@@ -1,5 +1,7 @@
 <template>
   <div>
+    <!-- Nom separer du HTML pour test unitaire -->
+    <h1 v-text="nomFooter" style="padding-right:2vh" class="nomFooter"></h1>
     <!-- Date locale et lien vers licene dans directives -->
     <h1 v-footerContent></h1>
   </div>
@@ -9,6 +11,7 @@ export default {
     name:'Footer',
     data(){
       return{
+        nomFooter : 'Charles-Etienne Villemure',
       }
     },
     computed: {
@@ -17,7 +20,7 @@ export default {
     footerContent:{
        bind: function(el){
          var dateDuJour = (new Date().toLocaleDateString())
-         el.innerHTML = 'Charles-Etienne Villemure &copy '+ dateDuJour + ' Lien : <a href="https://github.com/Charlesetiennev/1017examen2charlesetiennevillemure/blob/main/Licence" target="blank">licence</a>'
+         el.innerHTML = ' &copy '+ dateDuJour + ' Lien : <a href="https://github.com/Charlesetiennev/1017examen2charlesetiennevillemure/blob/main/Licence" target="blank">licence</a>'
        }
   }
     }
@@ -26,7 +29,9 @@ export default {
 </script>
 
 <style scoped>
-h1{
+div{
+  display: inline-flex;
+  justify-content: center;
   position: fixed;
   left: 0;
   bottom: 0;
