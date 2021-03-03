@@ -1,5 +1,6 @@
 <template>
 <div class="content">
+    <!-- Recuperations des routes dans le fichier router/index.js -->
     <li v-for="route in routes" v-bind:key="route.id">
         <router-link  :to="{path:route.router}">{{route.name}}</router-link>
     </li>

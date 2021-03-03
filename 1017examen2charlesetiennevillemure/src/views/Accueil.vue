@@ -1,6 +1,7 @@
 <template>
     <!-- Valeur HTML dans data -->
     <h1 v-text="content"></h1>
+    <!-- Image obtenue par URL -->
 </template>
 <script>
 export default {

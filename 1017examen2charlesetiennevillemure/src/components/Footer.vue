@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Date locale et lien vers licene dans directives -->
     <h1 v-footerContent></h1>
   </div>
 </template>
@@ -16,7 +17,7 @@ export default {
     footerContent:{
        bind: function(el){
          var dateDuJour = (new Date().toLocaleDateString())
-         el.innerHTML = 'Charles-Etienne Villemure &copy '+ dateDuJour + 'Lien : <a href="https://github.com/Charlesetiennev/1017examen2charlesetiennevillemure/blob/main/Licence" target="blank">Licence</a>'
+         el.innerHTML = 'Charles-Etienne Villemure &copy '+ dateDuJour + ' Lien : <a href="https://github.com/Charlesetiennev/1017examen2charlesetiennevillemure/blob/main/Licence" target="blank">licence</a>'
        }
   }
     }
